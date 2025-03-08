@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang ="en">
+<head>
+    <meta charset = "UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name = "viewport" content = "width=device-width, intial-scale=1.0">
+    <title>hello world</title> 
+    <link rel="stylesheet" href="style.css">   
+    <script src="https://kit.fontawesome.com/f7d97e7a32.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id = "header"> 
+    <!-- here we are going to create another div with a class name as we need to make our nav bar -->
+    <!-- we must understand that the class takes elements with same properties and id is for the ones with different properties -->
+    <!-- <div> -> The <div> element is a generic container element. It's used to group other HTML elements together.  -->
+    <!-- id (Identifier): -> The id attribute provides a unique identifier for a single HTML element within a document. -->
+    <!-- class (Class): It's used to group elements that share similar styling or behavior.-->
+    <div class="container">
+        <nav>
+            <img src="images/logo.jpg" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About </a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>UI/UX Designer</p>
+            <h1>Hola!! I am <span>Asif<br> Iqbal</span>  from India</h1>
+        </div>
+    </div>
+</div>
+<!-- this portion is where we say about ourselves -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/black.jpg">
+            </div>
+            <div class="about-col-2">
+                <h2 class="sub-title">About Me</h2>
+                <p>lfgkdjhfjghd  gkjdjh g sggsjsjg g s jgsg       gsgk gkjhgkjs jgsgkljsgjghk gg jgskglssis fgjg siusgjksgn sg ugiuhsh hsl.Here I say a little about myself.</p>
+                
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class = "tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Web Designer</li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class = "tab-contents" id ="education">
+                    <ul>
+                        <li><span>2026</span><br>B.Tech from MAKAUT.</li>
+                        <li><span>2019</span><br>class 10 and 12 from ICSE and ISC board.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div> 
+<!-- ------service------- -->
+ <div id="services">
+    <div class ="container">
+        <h1 class="sub-title">My Service</h1>
+        <div class="service-list">
+            <div>
+                <i class="fas fa-crop-alt"></i>
+                <h2>Web Development</h2>
+                <p>jsfj adjkf djsk </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <h2>second </h2>
+                <p>jsfj adjkf djsk </p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+    function opentab(tabname)
+    {
+        for(tablink of tablinks)
+        {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents)
+        {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+      
+</script>
+</body>
+</html>
